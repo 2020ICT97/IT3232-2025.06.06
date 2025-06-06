@@ -1,4 +1,4 @@
-package me.neranjana.spring.ica2.Model;
+package me.neranjana.spring.ica2.models;
 
 import java.util.List;
 
@@ -9,19 +9,19 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
 @Entity
-public class Categorey {
+public class Category {
 	@Id
 	private int id;
 	private String name;
-	@OneToMany(mappedBy = "categorey")
+	@OneToMany(mappedBy = "category")
 	@JsonIgnore
 	private List<Product>products;
 	
-	public Categorey() {
+	public Category() {
 		
 	}
 
-	public Categorey(int id, String name, List<Product> products) {
+	public Category(int id, String name, List<Product> products) {
 		this.id = id;
 		this.name = name;
 		this.products = products;

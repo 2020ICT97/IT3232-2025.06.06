@@ -1,4 +1,4 @@
-package me.neranjana.spring.ica2.Model;
+package me.neranjana.spring.ica2.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

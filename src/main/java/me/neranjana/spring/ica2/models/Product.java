@@ -1,4 +1,4 @@
-package me.neranjana.spring.ica2.Model;
+package me.neranjana.spring.ica2.models;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class Product {
     @ManyToOne
     private Seller seller;
     @ManyToOne
-    private Categorey categorey;
+    private Category category;
     @OneToMany(mappedBy = "product")
     private List<OrderItem>orderItems;
     
@@ -26,7 +26,7 @@ public class Product {
     	
     }
 
-	public Product(int id, String name, double price, String description, int stock, Seller seller, Categorey categorey,
+	public Product(int id, String name, double price, String description, int stock, Seller seller, Category category,
 			List<OrderItem> orderItems) {
 		this.id = id;
 		this.name = name;
@@ -34,7 +34,7 @@ public class Product {
 		this.description = description;
 		this.stock = stock;
 		this.seller = seller;
-		this.categorey = categorey;
+		this.category = category;
 		this.orderItems = orderItems;
 	}
 
@@ -86,12 +86,12 @@ public class Product {
 		this.seller = seller;
 	}
 
-	public Categorey getCategorey() {
-		return categorey;
+	public Category getCategory() {
+		return category;
 	}
 
-	public void setCategorey(Categorey categorey) {
-		this.categorey = categorey;
+	public void setCategory(Category category) {
+		this.category = category;
 	}
 
 	public List<OrderItem> getOrderItems() {

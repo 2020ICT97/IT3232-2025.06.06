@@ -1,15 +1,15 @@
-package me.neranjana.spring.ica2.Model;
+package me.neranjana.spring.ica2.models;
 
-public class Error {
+public class ErrorResponse {
 	private int code;
 	private String status;
 	private String message;
 	
-	public Error() {
+	public ErrorResponse() {
 		
 	}
 
-	public Error(int code, String status, String message) {
+	public ErrorResponse(int code, String status, String message) {
 		super();
 		this.code = code;
 		this.status = status;
